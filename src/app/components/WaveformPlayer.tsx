@@ -30,13 +30,6 @@ export default function WaveformPlayer({ audioLocation }: WaveformPlayerProps) {
 
     try {
       const canPlay = await wavesurfer.current.play();
-
-      if (canPlay === undefined) {
-        // Show play button
-        setShowPlayButton(true);
-      } else {
-        setIsPlaying(true);
-      }
       console.error("canPlay", canPlay);
     } catch (error) {
       console.error(error);
@@ -64,27 +57,25 @@ export default function WaveformPlayer({ audioLocation }: WaveformPlayerProps) {
 
   return (
     <div ref={waveformRef} className="fixed bottom-8 right-8 !z-100">
-      {showPlayButton && (
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => {
-            if (isPlaying) {
-              pauseSong();
-            } else {
-              playSong();
-            }
-          }}
-          className="px-8 py-4 bg-white text-rose-600 rounded-xl text-xl shadow-2xl hover:shadow-3xl transition-shadow flex items-center gap-3"
-        >
-          {isPlaying ? (
-            <Pause className="size-h-16 mx-auto text-rose-500 fill-rose-500" />
-          ) : (
-            <Play className="size-h-16 mx-auto text-rose-500 fill-rose-500" />
-          )}
-          {isPlaying ? "Pause music" : "Play music"}
-        </motion.button>
-      )}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => {
+          if (isPlaying) {
+            pauseSong();
+          } else {
+            playSong();
+          }
+        }}
+        className="px-8 py-4 bg-white text-rose-600 rounded-xl text-xl shadow-2xl hover:shadow-3xl transition-shadow flex items-center gap-3"
+      >
+        {isPlaying ? (
+          <Pause className="size-h-16 mx-auto text-rose-500 fill-rose-500" />
+        ) : (
+          <Play className="size-h-16 mx-auto text-rose-500 fill-rose-500" />
+        )}
+        {isPlaying ? "Pause music" : "Play music"}
+      </motion.button>
     </div>
   );
 }
