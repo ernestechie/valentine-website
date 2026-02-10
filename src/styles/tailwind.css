@@ -1,0 +1,10 @@
+@import "tailwindcss" source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import "tw-animate-css";
+
+@layer components {
+  .section {
+    @apply mx-auto px-4 pt-24 pb-16;
+  }
+}
