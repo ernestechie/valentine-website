@@ -23,6 +23,7 @@ export default function WaveformPlayer({ audioLocation }: WaveformPlayerProps) {
       progressColor: "#3b82f6",
       cursorColor: "#3b82f6",
       height: 0,
+      backend: "MediaElement",
     });
 
     wavesurfer.current.load(audioLocation);
