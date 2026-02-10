@@ -13,7 +13,7 @@ export default function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-red-50">
         <FloatingHearts />
-        <WaveformPlayer audioLocation="/song-2.mp3" />
+        <WaveformPlayer audioLocation={"/song-2.mp3"} />
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />

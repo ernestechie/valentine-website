@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import WaveformPlayer from "../components/WaveformPlayer";
 
 export function HomePage() {
   const [days, setDays] = useState(0);
@@ -98,7 +97,6 @@ export function HomePage() {
 
   return (
     <div className="">
-      {/* <WaveformPlayer audioLocation="/song-3.mp3" /> */}
       {/* Hero Section */}
       <motion.section
         ref={heroRef}

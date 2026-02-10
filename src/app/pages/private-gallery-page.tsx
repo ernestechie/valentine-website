@@ -12,7 +12,6 @@ import image4 from "../../assets/images/image-4.jpeg";
 import image5 from "../../assets/images/image-5.jpeg";
 import image6 from "../../assets/images/image-6.jpeg";
 import image7 from "../../assets/images/image-7.jpeg";
-// import WaveformPlayer from "../components/WaveformPlayer";
 
 import { LoveLettersPage } from "./love-letters-page";
 
@@ -238,7 +237,6 @@ export function PrivateGalleryPage() {
             exit={{ opacity: 0 }}
             className=""
           >
-            {/* <WaveformPlayer audioLocation="/song-2.mp3" /> */}
             {/* Header */}
             <div className="section bg-gradient-to-br from-rose-900 via-pink-900 to-red-900">
               <motion.div
